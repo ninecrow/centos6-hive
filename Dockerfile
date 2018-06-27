@@ -9,7 +9,7 @@ RUN sudo echo "export HIVE_HOME=${HIVE_HOME}" >> /etc/profile
 
 USER hadoop
 #COPY apache-hive-1.2.2-bin.tar.gz /tmp/hive.tar.gz
-RUN sudo wget https://mirrors.tuna.tsinghua.edu.cn/apache/hive/stable/apache-hive-1.2.2-bin.tar.gz -O /tmp/hive.tar.gz \
+RUN sudo wget http://mirror.bit.edu.cn/apache/hive/hive-1.2.2/apache-hive-1.2.2-bin.tar.gz -O /tmp/hive.tar.gz \
 	&& sudo wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-${MYSQL_CONNECT_VERSION}.tar.gz -O /tmp/mysql-connector-java-${MYSQL_CONNECT_VERSION}.tar.gz \
 	&& sudo mkdir -p ${HIVE_HOME} \
 	&& sudo tar -xvf /tmp/hive.tar.gz -C ${HIVE_HOME} --strip-components=1  \
