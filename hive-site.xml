@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>javax.jdo.option.ConnectionURL</name>
+    <value>jdbc:mysql://172.17.0.8:3306/hive</value>
+    <description>JDBC connect string for a JDBC metastore</description>
+  </property>
+  <property>
+    <name>javax.jdo.option.ConnectionDriverName</name>
+    <value>com.mysql.jdbc.Driver</value>
+    <description>Driver class name for a JDBC metastore</description>
+  </property>
+  <property>
+    <name>javax.jdo.option.ConnectionUserName</name>
+    <value>hive</value>
+    <description>Username to use against metastore database</description>
+  </property>
+  <property>
+    <name>javax.jdo.option.ConnectionPassword</name>
+    <value>hive</value>
+    <description>password to use against metastore database</description>
+  </property>
+  
+  
+  <property>
+    <name>hive.server2.transport.mode</name>
+    <value>binary</value>
+    <description>
+      Expects one of [binary, http].
+      Transport mode of HiveServer2.
+    </description>
+  </property>  
+  <property>
+    <name>hive.server2.thrift.bind.host</name>
+    <value>localhost</value>
+    <description>Bind host on which to run the HiveServer2 Thrift service.</description>
+  </property>
+  <property>
+    <name>hive.server2.thrift.http.port</name>
+    <value>10000</value>
+    <description>Port number of HiveServer2 Thrift interface when hive.server2.transport.mode is 'http'.</description>
+  </property>
+  <property>
+    <name>hive.server2.thrift.http.path</name>
+    <value>cliservice</value>
+    <description>Path component of URL endpoint when in HTTP mode.</description>
+  </property>
+  <!--
+  <property>
+    <name>hive.server2.authentication</name>
+    <value>none</value>
+    <description>
+      Expects one of [nosasl, none, ldap, kerberos, pam, custom].
+      Client authentication types.
+        NONE: no authentication check
+        LDAP: LDAP/AD based authentication
+        KERBEROS: Kerberos/GSSAPI authentication
+        CUSTOM: Custom authentication provider
+                (Use with property hive.server2.custom.authentication.class)
+        PAM: Pluggable authentication module
+        NOSASL:  Raw transport
+    </description>
+  </property>
+  <property>
+    <name>hive.server2.use.SSL</name>
+    <value>false</value>
+    <description>Set this to true for using SSL encryption in HiveServer2.</description>
+  </property>
+  -->
+</configuration>
